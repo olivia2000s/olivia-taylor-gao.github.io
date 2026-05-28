@@ -10,7 +10,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #f5f3ef;
+      --bg: #f0ede7;
       --ink: #111010;
       --ink-mid: #3a3835;
       --ink-soft: #7a7671;
@@ -235,7 +235,7 @@
 
     /* ── SECTION SHARED ── */
     section {
-      padding: 5rem 2.5rem;
+      padding: 3.5rem 2.5rem 0;
       position: relative;
     }
     .section-header {
@@ -831,7 +831,7 @@
     }
 
     .edu-chip { cursor: pointer; }
-    .edu-chip.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+    .edu-chip.active { background: var(--ink); color: var(--bg); border-color: var(--ink); font-weight: 500; }
 
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
@@ -866,7 +866,7 @@
   <!-- HERO -->
   <section id="home">
     <div class="hero-eyebrow">
-      <span class="grad-text">&#9632;</span> She/Her &nbsp;·&nbsp; San Jose, CA &nbsp;·&nbsp; UC Berkeley
+      <span class="grad-text">&#9632;</span> She/Her &nbsp;·&nbsp; San Francisco Bay Area &nbsp;·&nbsp; UC Berkeley
     </div>
     <h1 class="hero-name">Olivia<br><em>Taylor-Gao</em></h1>
 
@@ -884,12 +884,12 @@
   </section>
 
   <!-- EDUCATION -->
-  <section id="education" style="padding-top:3.5rem; background:var(--cream);">`
-    <div class="section-header reveal">
+  <section id="education" style="padding: 3.5rem 2.5rem 0; background:var(--cream);">
+    <div class="section-header reveal" style="margin-bottom:1.25rem;">
       <span class="section-num">02</span>
       <h2 class="section-title"><em>Education</em></h2>
     </div>
-    <div class="edu-block reveal">
+    <div class="edu-block reveal" style="margin-bottom:0;">
       <div class="edu-school">University of California, Berkeley</div>
       <div class="edu-degree">
         BS Environmental Economics &amp; Policy<br>
@@ -903,7 +903,7 @@
   
 
   <!-- EXPERIENCE -->
-  <section id="experience">
+  <section id="experience" style="padding-top:2rem; background:var(--cream);">
     <div class="section-header reveal" style="margin-bottom:1.25rem;">
       <span class="section-num">03</span>
       <h2 class="section-title">Selected <em>Experience</em></h2>
@@ -936,7 +936,7 @@
           <span class="skill-chip edu-chip" onclick="toggleSkillChip(this, 'Figma', 'UI/UX design tool used to build wireframes, prototypes, and design systems across multiple product and design projects.')">Figma</span>
           <span class="skill-chip edu-chip" onclick="toggleSkillChip(this, 'Excel', 'Advanced Excel skills including data modeling, PivotTables, and financial analysis. Certified via Microsoft and Coursera.')">Excel</span>
           <span class="skill-chip edu-chip" onclick="toggleSkillChip(this, 'Canva', 'Graphic design tool used for creating presentations, social media content, and marketing materials across various projects.')">Canva</span>
-          <span class="skill-chip edu-chip" onclick="toggleSkillChip(this, 'Project Management', 'Google-certified in project management methodologies including agile, stakeholder communication, and lifecycle planning.')">Project Management</span>
+          <span class="skill-chip edu-chip" onclick="toggleSkillChip(this, 'Project Management', 'Project management methodologies including agile, stakeholder communication, and lifecycle planning.')">Project Management</span>
           <span class="skill-chip edu-chip" onclick="toggleSkillChip(this, 'UI Design', 'User interface design applied through Rooh, Bilt, and the NewBeex platform. Google UX Design certified.')">UI Design</span>
           <span class="skill-chip edu-chip" onclick="toggleSkillChip(this, 'Graphic Design', 'Applied across brand identity, pitch decks, and sustainability communications using Figma, Canva, and Adobe suite.')">Graphic Design</span>
           <span class="skill-chip edu-chip" onclick="toggleSkillChip(this, 'Business Planning', 'Developed go-to-market strategies, business models, and startup pitches through Rooh, SCET, and multiple case competitions.')">Business Planning</span>
@@ -951,8 +951,8 @@
         </div>
       </div>
     </div>
-    <div style="display:flex; align-items:center; gap:1.5rem; margin: 2rem 0 0;">
-      <div style="font-family:var(--mono); font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-soft); white-space:nowrap;">Work Experience</div>
+    <div style="display:flex; align-items:center; gap:1.5rem; margin: 2rem 0 1.5rem;">
+      <div style="font-family:var(--serif); font-size:1.1rem; font-style:italic; color:var(--ink-soft); white-space:nowrap;">Work Experience</div>
       <div style="flex:1; height:1px; background:var(--rule);"></div>
     </div>
     <div class="exp-list">
@@ -1296,7 +1296,7 @@
           <div style="position:absolute; bottom:1rem; right:1.75rem; font-family:var(--mono); font-size:0.58rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); opacity:0.5; pointer-events:none;">click to explore</div>
         </div>
         <!-- Description panel -->
-        <div id="waveDesc" style="overflow:hidden; max-height:0; transition:max-height 0.45s ease, opacity 0.3s ease; opacity:0; background:var(--bg);">
+        <div id="waveDesc" style="overflow:hidden; max-height:0; transition:max-height 0.45s ease, opacity 0.3s ease; opacity:0; background:var(--cream);">
           <div style="padding: 1.25rem 1.75rem; display:flex; align-items:stretch; gap:1.25rem; border-top:1px solid var(--rule);">
             <div id="waveDescAccent" style="width:3px; border-radius:2px; flex-shrink:0; transition:background 0.3s;"></div>
             <div style="flex:1;">
@@ -1306,12 +1306,12 @@
           </div>
         </div>
         <!-- Clickable pill row -->
-        <div style="display:flex; gap:0.5rem; flex-wrap:wrap; padding:1rem 1.75rem; border-top:1px solid var(--rule); background:var(--bg);">
-          <button onclick="selectWaveDot('Music')"     class="wave-btn" data-color="#5d8fa3">Music</button>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap; padding:1rem 1.75rem; border-top:1px solid var(--rule); background:var(--cream);">
+          <button onclick="selectWaveDot('Music')"      class="wave-btn" data-color="#5d8fa3">Music</button>
           <button onclick="selectWaveDot('Hiking')"    class="wave-btn" data-color="#607a6e">Hiking</button>
-          <button onclick="selectWaveDot('Curiosity')" class="wave-btn" data-color="#68607e">Curiosity</button>
+          <button onclick="selectWaveDot('Knowledge')" class="wave-btn" data-color="#68607e">Knowledge</button>
           <button onclick="selectWaveDot('Travel')"    class="wave-btn" data-color="#5d8fa3">Travel</button>
-          <button onclick="selectWaveDot('Nature')"    class="wave-btn" data-color="#607a6e">Nature</button>
+          <button onclick="selectWaveDot('The World')" class="wave-btn" data-color="#607a6e">The World</button>
         </div>
       </div>
 
@@ -1441,28 +1441,24 @@
   </section>
 
   <!-- RÉSUMÉ -->
-  <section id="resume" style="padding: 3rem 2.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:2rem; border-bottom: 1px solid var(--rule);">
-    <div style="display:flex; align-items:baseline; gap:1.5rem;">
-      <span style="font-family:var(--mono); font-size:0.65rem; color:#415a77; letter-spacing:0.1em;">08</span>
-      <h2 style="font-family:var(--serif); font-size:clamp(1.4rem,2.5vw,2rem); font-weight:400; letter-spacing:-0.02em;">Full <em>Résumé</em></h2>
-    </div>
-    <div style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center;">
-      <a href="Olivia_Taylor-Gao_Resume.pdf" target="_blank"
-         style="font-family:var(--mono); font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase;
-                color:var(--bg); background:var(--ink); text-decoration:none;
-                padding:0.85rem 2rem; border-radius:3px; transition:opacity 0.2s;
-                display:inline-flex; align-items:center; gap:0.6rem;"
-         onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
-        View Résumé ↗
-      </a>
-      <a href="Olivia_Taylor-Gao_Resume.pdf" download
+  <section id="resume" style="padding: 3rem 2.5rem; border-bottom: 1px solid var(--rule);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.5rem; margin-bottom:2rem;">
+      <div style="display:flex; align-items:baseline; gap:1.5rem;">
+        <span style="font-family:var(--mono); font-size:0.65rem; color:#415a77; letter-spacing:0.1em;">08</span>
+        <h2 style="font-family:var(--serif); font-size:clamp(1.4rem,2.5vw,2rem); font-weight:400; letter-spacing:-0.02em;">Full <em>Résumé</em></h2>
+      </div>
+      <a href="https://raw.githubusercontent.com/olivia2000s/olivia2000s.github.io/main/Olivia_Taylor-Gao_Spring_2026_Resume___docx__6_.pdf" download="Olivia_Taylor-Gao_Resume.pdf"
          style="font-family:var(--mono); font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase;
                 color:var(--ink); text-decoration:none; border:1px solid rgba(17,16,16,0.2);
-                padding:0.85rem 2rem; border-radius:3px; transition:background 0.2s, color 0.2s;"
+                padding:0.75rem 1.75rem; border-radius:3px; transition:background 0.2s, color 0.2s;"
          onmouseover="this.style.background='var(--cream)'" onmouseout="this.style.background='transparent'">
         Download PDF ↓
       </a>
     </div>
+    <iframe src="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/olivia2000s/olivia2000s.github.io/main/Olivia_Taylor-Gao_Spring_2026_Resume___docx__6_.pdf&embedded=true"
+            style="width:100%; height:800px; border:1px solid var(--rule); border-radius:8px; display:block;"
+            title="Olivia Taylor-Gao Resume">
+    </iframe>
   </section>
 
   <!-- CONNECT -->
@@ -1569,11 +1565,11 @@
       var activeDot = null;
 
       var dots = [
-        { label: 'Music',     x: 0.10, color: '#5d8fa3', desc: 'Always have something playing. Music is a constant — whether working, hiking, or just existing.' },
+        { label: 'Music',     x: 0.10, color: '#5d8fa3', desc: 'Music is one of my great passions in life.' },
         { label: 'Hiking',    x: 0.28, color: '#607a6e', desc: 'Love hiking around and exploring new trails.' },
-        { label: 'Curiosity', x: 0.50, color: '#68607e', desc: 'Like to learn new things — always asking questions and diving into whatever feels interesting.' },
+        { label: 'Knowledge', x: 0.50, color: '#68607e', desc: 'I enjoy the pursuit of knowledge.' },
         { label: 'Travel',    x: 0.70, color: '#5d8fa3', desc: 'Drawn to new places, cultures, and the perspectives that come with them.' },
-        { label: 'Nature',    x: 0.90, color: '#607a6e', desc: 'Like to be in nature — it clears my head and keeps me grounded.' },
+        { label: 'The World', x: 0.90, color: '#607a6e', desc: 'The world is complex and constantly evolving, which is why I\'m drawn to learning about people, societies, and the ideas that shape our lives.' },
       ];
 
       var waves = [
@@ -1712,19 +1708,19 @@
       var lbl   = document.getElementById('skillChipLabel');
       var txt   = document.getElementById('skillChipText');
       if (_activeSkillChip === el) {
-        el.style.color = '';
+        el.classList.remove('active');
         panel.style.maxHeight = '0';
         panel.style.opacity = '0';
         _activeSkillChip = null;
         return;
       }
-      if (_activeSkillChip) _activeSkillChip.style.color = '';
+      if (_activeSkillChip) _activeSkillChip.classList.remove('active');
       // also close cert panel
       var certPanel = document.getElementById('eduChipPanel');
       certPanel.style.maxHeight = '0'; certPanel.style.opacity = '0';
-      if (_activeEduChip) { _activeEduChip.style.color = ''; _activeEduChip = null; }
+      if (_activeEduChip) { _activeEduChip.classList.remove('active'); _activeEduChip = null; }
       _activeSkillChip = el;
-      el.style.color = 'var(--accent)';
+      el.classList.add('active');
       lbl.textContent = label;
       txt.textContent = desc;
       panel.style.maxHeight = '100px';
@@ -1740,15 +1736,15 @@
       var lnk    = document.getElementById('eduChipLink');
 
       if (_activeEduChip === el) {
-        el.style.color = '';
+        el.classList.remove('active');
         panel.style.maxHeight = '0';
         panel.style.opacity = '0';
         _activeEduChip = null;
         return;
       }
-      if (_activeEduChip) _activeEduChip.style.color = '';
+      if (_activeEduChip) _activeEduChip.classList.remove('active');
       _activeEduChip = el;
-      el.style.color = 'var(--accent)';
+      el.classList.add('active');
 
       lbl.textContent = label;
       txt.textContent = desc;
